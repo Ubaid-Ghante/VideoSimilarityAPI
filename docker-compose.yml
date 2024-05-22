@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  videosimilarityapi:
+    build: .  
+    environment:
+      PYTHONUNBUFFERED: 1
+    ports:
+      - "5000:5000"  
+
+    
+
