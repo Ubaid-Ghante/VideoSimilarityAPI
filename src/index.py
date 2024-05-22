@@ -14,7 +14,7 @@ def index():
 
 @app.route('/predict', methods=['POST'])
 def predict():
-    data = request.json
+    data = request.get_json()["payload"]
     video_url = data.get('video_url')
     similarity_bol = predict_video_similarity(video_url)
     return jsonify({"payload": {
