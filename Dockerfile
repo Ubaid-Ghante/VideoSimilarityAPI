@@ -48,5 +48,7 @@ WORKDIR /api
 COPY entrypoint.sh /api/entrypoint.sh
 COPY src /api/src
 
+EXPOSE 5000
+
 RUN chmod +x entrypoint.sh
 ENTRYPOINT ["./entrypoint.sh"]
